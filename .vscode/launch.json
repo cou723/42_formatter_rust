@@ -1,0 +1,58 @@
+{
+  // IntelliSense を使用して利用可能な属性を学べます。
+  // 既存の属性の説明をホバーして表示します。
+  // 詳細情報は次を確認してください: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'norm-formatter'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=norm-formatter",
+          "--package=norm-formatter"
+        ],
+        "filter": {
+          "name": "norm-formatter",
+          "kind": "bin"
+        }
+      },
+      "args": ["libft.h"],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'norm-formatter'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=norm-formatter",
+          "--package=norm-formatter"
+        ],
+        "filter": {
+          "name": "norm-formatter",
+          "kind": "bin"
+        }
+      },
+      "args": ["libft.h"],
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "symlink dSYM"
+    },
+    {
+      "name": "Run Test Debugger",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/target/debug/norm-formatter.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": true,
+      "preLaunchTask": "cargo test build"
+    }
+  ]
+}

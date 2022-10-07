@@ -1,0 +1,60 @@
+// clang-formatでフォーマットされたC言語の要素一覧
+// 42で使われない文法はサポートしない
+// テストを書く際に便利そうなので作った
+
+// プリプロセッサ命令
+#include <stdio.h>
+#include "libft.h"
+#define MAX 100
+#define minus(x) (x - 1)
+#ifndef LIBFT_H
+#ifdef LIBFT_H
+#endif
+
+// 関数
+// 引数のない関数宣言
+int main()
+// 引数のないプロトタイプ宣言
+int main();
+// 引数のある関数宣言
+int main(int ac,char *av[])
+// 引数のあるプロトタイプ宣言
+int main(int ac,char *av[]);
+// 関数呼び出し
+	test();
+	test("test string", 100);
+// 関数呼び出し:予約語パーティー
+	test("auto", "break", "case", "char", "const", "continue", "default", "do", "double", "else", "enum", "extern", "float", "for", "goto", "if", "int", "long", "register", "return", "short","signed", "sizeof", "static", "struct", "switch", "typedef", "union", "unsigned", "void","volatile", "while");
+// return:括弧なし
+	return n;
+	return n || m;
+	return (n + 1) * (m + 1);
+// return:括弧あり
+	return (n);
+	return (n || m);
+	return ((n + 1) * (m + 1));
+
+// 変数
+// 変数宣言
+	int a;
+	unsigned long a;
+	void *p;
+	char s[12];
+// 予約語以外の変数宣言
+	size_t a;
+// 自作型の変数宣言
+	t_list list;
+	t_list *list;
+
+// 制御構文
+	if(x < 100)
+	while(*s != NULL)
+	break;
+	continue;
+
+// 構造体
+typedef struct point {
+	int x;
+	unsigned long y;
+} t_test;
+//

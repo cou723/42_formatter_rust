@@ -1,0 +1,13 @@
+[package]
+authors = ["cou kamiya <courange.c@gmail.com>"]
+categories = ["command-line-utilities"]
+description = "Formats (format & lint) code written in c language to fit Norm."
+edition = "2021"
+keywords = ["normintte", "42", "norm", "formatter"]
+license = "MIT"
+name = "norm-formatter"
+readme = "README.md"
+version = "1.0.4"
+
+[dependencies]
+structopt = "0.3.13"

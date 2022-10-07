@@ -1,0 +1,21 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "symlink dSYM",
+      "type": "shell",
+      "command": "sh",
+      "args": [
+        "-c",
+        "cd ${workspaceFolder}/target/debug; for d in deps/*.dSYM; do ln -fs $d ./; done"
+      ]
+    },
+    {
+      "type": "shell",
+      "label": "cargo test build",
+      "command": "cargo",
+      "args": ["test", "--no-run"],
+      "problemMatcher": ["$rustc"]
+    }
+  ]
+}

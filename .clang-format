@@ -1,0 +1,77 @@
+---
+# BasedOnStyle: LLVM
+---
+
+Language: Cpp
+
+TabWidth: 4
+
+IndentWidth: 4
+
+UseTab: ForContinuationAndIndentation
+
+SpaceBeforeParens: ControlStatements
+
+AllowShortFunctionsOnASingleLine: None
+
+AlignEscapedNewlines: Left
+
+AllowShortBlocksOnASingleLine: Never
+
+AllowShortFunctionsOnASingleLine: None
+
+AllowShortIfStatementsOnASingleLine: Never
+
+AlwaysBreakAfterReturnType: None
+
+AlwaysBreakBeforeMultilineStrings: false
+
+BinPackArguments: true
+
+BinPackParameters: true
+
+BreakBeforeBraces: Allman
+
+BreakBeforeTernaryOperators: true
+
+ColumnLimit: 80
+
+IncludeBlocks: Merge
+
+KeepEmptyLinesAtTheStartOfBlocks: false
+
+MaxEmptyLinesToKeep: 1
+
+PointerAlignment: Right
+
+PenaltyBreakBeforeFirstCallParameter: 1
+
+PenaltyBreakString: 1
+
+PenaltyExcessCharacter: 10
+
+PenaltyReturnTypeOnItsOwnLine: 100
+
+SpaceAfterCStyleCast: false
+
+SpaceBeforeAssignmentOperators: true
+
+SpaceBeforeSquareBrackets: false
+
+SpaceInEmptyParentheses: false
+
+SpacesInCStyleCastParentheses: false
+
+SpacesInParentheses: false
+
+SpacesInSquareBrackets: false
+
+AlignOperands: false
+
+Cpp11BracedListStyle: true
+
+BinPackArguments: false
+
+BinPackParameters: false
+
+#InsertTrailingCommas: Wrapped
